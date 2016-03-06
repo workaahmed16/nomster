@@ -29,6 +29,13 @@
           <% end %>
         </ul>
         <ul class="nav navbar-nav navbar-right">
+          <% if user_signed_in? %>
+            <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
+          <% else %>
+            <li><%= link_to 'Sign in', new_user_session_path %>
+            </li>
+            <li><%= link_to 'Sign up', new_user_registration_path %></li>
+          <% end %>
           <li><a href="#">Link</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
@@ -37,8 +44,12 @@
 
 
 <!-- User Validation - The Flash -->
+<% if notice.present? %>
 <p class="alert alert-info"><%= notice %></p>
+<% end %>
+<% if alert.present? %>
 <p class="alert alert-danger"><%= alert %></p>
+<% end %>
 
 
 <%= yield %>
