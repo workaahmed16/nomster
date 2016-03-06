@@ -11,16 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160305153713) do
+ActiveRecord::Schema.define(version: 20160306192501) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "places", force: true do |t|
-    t.string "name"
-    t.text   "description"
-    t.string "address"
+    t.string  "name"
+    t.text    "description"
+    t.string  "address"
+    t.integer "user_id"
   end
+
+  add_index "places", ["user_id"], name: "index_places_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
