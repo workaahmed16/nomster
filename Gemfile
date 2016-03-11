@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem "figaro", ">= 1.0.0"
 gem 'geocoder'
+gem 'carrierwave'
 gem 'kaminari'
 gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'simple_form'
