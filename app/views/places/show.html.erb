@@ -116,8 +116,10 @@ function initMap() {
 <h1>Photos</h1>
 
 <% @place.photos.each do |photo| %>
- 
+  <div>
+    <blockquote>
     <%= image_tag photo.picture %>
     <%= photo.caption %>
-
+    </blockquote>
+  </div>
 <% end %>
