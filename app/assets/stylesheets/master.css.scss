@@ -27,6 +27,7 @@ body {
   background:url('/assets/dark_wall.png');
   border-radius: 0;
   box-shadow: 0px 1px 3px #2a2a2a;
+  margin-bottom:0;
 }
 
 .navbar-inverse .navbar-brand {
@@ -68,4 +69,38 @@ blockquote:before {
 }
 blockquote p {
   display: inline;
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    display: block;
+    width: 100%;
+    height: 550px;
+    line-height: 1;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95em
+}
+
+.carousel-caption {
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 32px;
+    font-weight:100;
+    position: absolute;
+    left: 15%;
+    right: 15%;
+    bottom: 20px;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    color: #FFFFFF;
+    text-align: center;
+    text-shadow: rgba(0,0,0,0.95) 2px 2px;
+    background-color: rgba(1,0,0,0.5);
+    width:100%;
+    position:absolute;
+    left:0;
+}
+
+.carousel {
+  box-shadow: 0px 3px 8px #2a2a2a;
 }
